@@ -13,13 +13,13 @@ class _UnitConverterPageState extends State<UnitConverterPage> {
   double metersToFeet(double meters) {
     return meters * 3.28084;
   }
-
+// function for storing the converted value.
   void convert() {
     setState(() {
       convertedValue = metersToFeet(inputValue);
     });
   }
-
+// layout for unit convertor.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -6,10 +6,11 @@ class NotesPage extends StatefulWidget {
 }
 
 class _NotesPageState extends State<NotesPage> {
+  // array of data need to save in list format
   List<String> notes = [];
-
+// using texteditingcontroller for storing the text data and update to the notes list
   TextEditingController _noteController = TextEditingController();
-
+  // function for adding text input to the array list.
   void _addNote() {
     String noteText = _noteController.text.trim();
     if (noteText.isNotEmpty) {
@@ -19,7 +20,7 @@ class _NotesPageState extends State<NotesPage> {
       });
     }
   }
-
+// layout for adding text with ok and cancel buttons.
   void _showNoteDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -49,7 +50,7 @@ class _NotesPageState extends State<NotesPage> {
       },
     );
   }
-
+  // layout for displaying the list of notes added.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

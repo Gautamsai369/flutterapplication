@@ -1,12 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-class Numbergenerater extends StatefulWidget {
+class Numbergenerator extends StatefulWidget {
   @override
   _NumberGeneratorPageState createState() => _NumberGeneratorPageState();
 }
 
-class _NumberGeneratorPageState extends State<Numbergenerater> {
+// creating the private class to generate random number using min max values using random function.
+class _NumberGeneratorPageState extends State<Numbergenerator> {
   TextEditingController _minController = TextEditingController();
   TextEditingController _maxController = TextEditingController();
   int generatedNumber = 0;
@@ -26,7 +27,7 @@ class _NumberGeneratorPageState extends State<Numbergenerater> {
       generatedNumber = Random().nextInt(max - min + 1) + min;
     });
   }
-
+  // creating a layout for manual entry for user to give min max values
   @override
   Widget build(BuildContext context) {
     return Scaffold(

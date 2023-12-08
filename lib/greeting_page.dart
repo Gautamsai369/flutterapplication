@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class GreetingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // using scaffold created the greeting page with a single text box and image asset
+    // added 4 elevated buttons for 4 different pages
+    // on pressed event triggering to their respective pages
     return Scaffold(
       appBar: AppBar(
         title: Text('Greeting Page'),
@@ -40,7 +43,8 @@ class GreetingPage extends StatelessWidget {
               child: Text('Open Unit Converter'),
             ),
             ElevatedButton(onPressed: () {
-              Navigator.pushNamed(context, '/Numbergenerater');
+              // Navigate to Number Generator
+              Navigator.pushNamed(context, '/Numbergenerator');
             }, child: Text('Number Generator'))
           ],
         ),

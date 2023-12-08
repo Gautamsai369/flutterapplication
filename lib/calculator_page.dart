@@ -4,13 +4,14 @@ class CalculatorPage extends StatefulWidget {
   @override
   _CalculatorPageState createState() => _CalculatorPageState();
 }
-
+// created a class for calculating the input of 2 numbers
 class _CalculatorPageState extends State<CalculatorPage> {
   String _input = '0';
   String _output = '0';
   String _operand = '';
   double _num1 = 0.0;
 
+  // general function for every numeric button pressed where input is getting stored for further calculation.
   void _onDigitPressed(String digit) {
     setState(() {
       if (_input == '0') {
@@ -20,7 +21,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
       }
     });
   }
-
+  // storing the operand for operation to be done.
   void _onOperationPressed(String operation) {
     setState(() {
       _operand = operation;
@@ -28,7 +29,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
       _input = '0';
     });
   }
-
+  // function of on equal pressed.
   void _onEqualPressed() {
     setState(() {
       double num2 = double.parse(_input);
@@ -61,7 +62,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
       _num1 = 0.0;
     });
   }
-
+  // layout development for calculator.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
